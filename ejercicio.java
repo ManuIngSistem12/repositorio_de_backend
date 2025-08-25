@@ -3,25 +3,23 @@ import java.util.Scanner;
 public class ejercicio {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        int contador = 0;
+        StringBuilder NuevaFrase = new StringBuilder();
 
         System.out.println("ingresa la cadena que quieras");
         String cadena = leer.nextLine();
-        System.out.println("ingresa la letra que quieres comparar");
+        System.out.println("ingresa la letra que quieres eliminar");
         char letra = leer.next().charAt(0);
 
 
         for(int i = 0; i<cadena.length();i++){
             char letraActual = cadena.charAt(i);
-            if(letraActual == letra){
-                contador ++;
+            if(letraActual != letra){
+                NuevaFrase.append(letraActual);
             }
         }
 
-        System.out.println("la letra: " + letra + " se repite " + contador + " veces en la frase: " + cadena);
+        System.out.println("la cadena: " + cadena + " con la letra: " + letra + " eliminada se veria: " + NuevaFrase.toString());
         
-
-
     }
 
     
