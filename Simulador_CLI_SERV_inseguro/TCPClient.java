@@ -46,7 +46,7 @@ public class TCPClient {
             TCPClient client = new TCPClient("127.0.0.1", 5000);
             client.connect();
 
-            client.sendMessage("Hola servidor, soy el cliente ");
+            client.sendMessage("Hola el ususario es : Manuuu12 y la contraseña es: 12345678 ");
             String respuesta = client.receiveMessage();
             System.out.println("Respuesta del servidor: " + respuesta);
             client.disconnect();
